@@ -1,0 +1,19 @@
+{
+  "name": "autotask",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SeanLI12/scheduleSQLTask.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SeanLI12/scheduleSQLTask/issues"
+  },
+  "homepage": "https://github.com/SeanLI12/scheduleSQLTask#readme"
+}
