@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/SeanLI12/scheduleSQLTask#readme",
   "dependencies": {
+    "mysql": "^2.15.0",
     "node-schedule": "^1.2.5"
   }
 }
