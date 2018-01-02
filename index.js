@@ -1,5 +1,5 @@
 //引入先前的mysql connect
-var config = require("./mysql_config.js");
+var config = require("./mysql_connect.js");
 var db = config.db;
 var query = " \
 SELECT visit.user_id AS userid, SUM(revenue.revenue) AS total  \
