@@ -17,8 +17,8 @@ var fs = require('fs');
 
 http.createServer(function (req, res) {
     res.writeHead(200, { 'Content-Type': 'application/json' });
-
-    res.json(function () {
+    res.write(function () {
+        var okoee;
         db.query(query, function (err, rows, fiels) {
             if (err) {
                 console.log(err);
@@ -28,8 +28,9 @@ http.createServer(function (req, res) {
             console.log(rows);
             //fiels是欄位的資訊
             console.log(fiels);
-            return rows;
+            okoee = rows;
         });
+        return okoee;
     })
     res.end("end");
 }).listen(9615);
