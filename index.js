@@ -1,5 +1,5 @@
 //引入先前的mysql connect
-var config = require("./mysql_connect.js");
+var config = require("./mysql_config.js");
 var db = config.db;
 var query = " \
 SELECT visit.user_id AS userid, SUM(revenue.revenue) AS total  \
@@ -17,6 +17,19 @@ var fs = require('fs');
 
 http.createServer(function (req, res) {
     res.writeHead(200, { 'Content-Type': 'application/json' });
-    res.json(rows)
+
+    res.json(function () {
+        db.query(query, function (err, rows, fiels) {
+            if (err) {
+                console.log(err);
+                return;
+            }
+            //rows是資料庫query出來的所有資料(JSON)
+            console.log(rows);
+            //fiels是欄位的資訊
+            console.log(fiels);
+            return rows;
+        });
+    })
     res.end("end");
-}).listen(9610);
+}).listen(9615);
